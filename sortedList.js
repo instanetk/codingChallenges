@@ -1,16 +1,5 @@
 // Merge two sorted linked lists and return it as a sorted list. The list should be made by splicing together the nodes of the first two lists.
 
-// let l1 = [1, 2, 4];
-// let l1 = [];
-// let l2 = [1, 3, 4];
-// let l2 = [];
-
-// class ListNode {
-//   constructor(data) {
-//     this.data = data;
-//     this.next = null;
-//   }
-// }
 function ListNode(val, next) {
   this.val = val === undefined ? 0 : val;
   this.next = next === undefined ? null : next;
