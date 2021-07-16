@@ -11,7 +11,7 @@ function numPlayers(k, scores) {
   // Write your code here
   // Sort scores in descending order
   let playerScores = scores.sort((a, b) => b - a);
-  console.log(playerScores);
+  // console.log(playerScores);
 
   // Assign weight to each value
 
@@ -33,6 +33,7 @@ function numPlayers(k, scores) {
   }
 
   // Filter how many weighted values are less than or equal to k
+  // Exclude players with a score of zero
   let levelUp = 0;
   rankWeight.forEach((player, index) => {
     if (playerScores[index] !== 0 && player <= k) levelUp++;
