@@ -8,15 +8,17 @@ const fib = (n, memo = {}) => {
   return memo[n];
 };
 
-console.log(fib(2));
-console.log(fib(6));
-console.log(fib(50));
+// console.log(fib(2));
+// console.log(fib(6));
+// console.log(fib(50));
 
 // Normal
 
 const fibs = (n) => {
   if (n <= 2) return 1;
+
+  console.log(fibs(n - 1) + fibs(n - 2));
   return fibs(n - 1) + fibs(n - 2);
 };
 
-console.log(fibs(6));
+console.log('>', fibs(6));

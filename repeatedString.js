@@ -1,8 +1,10 @@
-function repeatedString(s, n) {
+function repeatedString(s, n, x) {
   // Write your code here
 
-  let avg = n / s.length;
-  console.log('avg', avg, 'length', s.length);
+  let avg = Math.trunc(n / s.length);
+  let remainder = n % s.length;
+
+  console.log('avg', avg, 'remainder', remainder, 'length', s.length, 'n', n);
 
   let array = s.split('');
 
@@ -10,26 +12,36 @@ function repeatedString(s, n) {
   for (let i = 0; i < array.length; i++) {
     if (array[i] === 'a') count++;
   }
-  console.log('count', n / count);
-  console.log('simple', count * avg);
-  console.log('ceil', Math.ceil(count * avg));
-  console.log('round', Math.round(count * avg));
-  console.log('expected', 9428851088.77143 * 35);
 
-  return count * avg;
+  count = count * avg;
+  console.log(count);
+  // Check for the remainder characters in the infinite string
+  for (let i = 0; i < remainder; i++) {
+    console.log(i, array[i] === 'a', count);
+    if (array[i] === 'a') count++;
+  }
+
+  // let result = count * avg;
+  console.log(count, x === count);
+  return count;
 }
-
-let s = 'udjlitpopjhipmwgvggazhuzvcmzhulowmveqyktlakdufzcefrxufssqdslyfuiahtzjjdeaxqeiarcjpponoclynbtraaawrps';
-let n = 872514961806;
 
 let s2 = 'bcbccacaacbbacabcabccacbccbababbbbabcccbbcbcaccababccbcbcaabbbaabbcaabbbbbbabcbcbbcaccbccaabacbbacbc';
 let n2 = 649606239668;
-// 162401559918
+let x2 = 162401559918;
 
 let s3 = 'aadcdaccacabdaabadadaabacdcbcacabbbadbdadacbdadaccbbadbdcadbdcacacbcacddbcbbbaaccbaddcabaacbcaabbaaa';
 let n3 = 942885108885;
-// 330009788107
+let x3 = 330009788107;
 
-// repeatedString(s, n);
-// repeatedString(s2, n2);
-repeatedString(s3, n3);
+let s4 = 'gfcaaaecbg';
+let n4 = 547602;
+let x4 = 164280;
+
+let s5 = 'a';
+let n5 = 1000000000000;
+let x5 = 1000000000000;
+repeatedString(s2, n2, x2);
+// repeatedString(s3, n3, x3);
+// repeatedString(s4, n4, x4);
+// repeatedString(s5, n5, x5);
