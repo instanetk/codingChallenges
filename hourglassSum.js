@@ -16,8 +16,6 @@ function hourglassSum(arr) {
 
       if (!isNaN(sum)) {
         arraySums.push(sum);
-      } else {
-        i++;
       }
     }
   }
