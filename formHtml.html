@@ -1,0 +1,38 @@
+<form>
+    <div>
+        <label for="Name" aria-labelledby="Name">Name</label>
+        <input type="text" name="Name" id="Name" />
+    </div>
+    <div>
+        <label for="Email">Email</label>
+        <input type="email" name="Email" id="Email" />
+    </div>
+    <div>
+        <label for="Password">Password</label>
+        <input type="password" name="Password" minlength="8" id="Password" />
+    </div>
+    <fieldset id="fieldset">
+        <legend id="referrer">Referrer</legend>
+        <div>
+            <input type="radio" name="TV" id="TV">
+            <label for="TV">TV</label>
+            </input>
+        </div>
+        <div>
+            <input type="radio" name="Internet" id="Internet">
+            <label for="Internet">Internet</label>
+            </input>
+        </div>
+        <div>
+            <input type="radio" name="None" id="None" checked>
+            <label for="None">None</label>
+            </input>
+        </div>
+    </fieldset>
+    <input type="checkbox" id="checkbox" required>
+    <label for="checkbox">I accept the terms of service</label>
+    </input>
+    <div>
+        <button type="submit" id="submit">Register</button>
+    </div>
+</form>
